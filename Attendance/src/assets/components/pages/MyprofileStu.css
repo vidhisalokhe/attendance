@@ -1,0 +1,33 @@
+.profile-section {
+  padding: 20px;
+}
+
+.profile-section h1 {
+  font-size: 40px;
+  color: #141f29;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  background: rgb(254, 255, 254);
+  padding: 25px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+}
+
+.profile-card p {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #34495e;
+}
+
+.profile-card strong {
+  color: #2c3e50;
+}

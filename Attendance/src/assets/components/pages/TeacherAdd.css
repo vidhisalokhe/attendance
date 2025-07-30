@@ -1,0 +1,54 @@
+.attendance-container {
+  width: 85%;
+  margin: 30px auto;
+  text-align: center;
+  
+}
+ .attendance-container h2{
+    font-size: 30px;
+ }
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.attendance-table th {
+  background-color: #f4f4f4;
+}
+
+.status-present {
+  color: green;
+  font-weight: bold;
+}
+
+.status-absent {
+  color: red;
+  font-weight: bold;
+}
+
+.present-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.absent-btn {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

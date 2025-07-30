@@ -1,0 +1,45 @@
+.attendance-page {
+  padding: 20px;
+}
+
+.attendance-page h1 {
+  margin-bottom: 10px;
+  color: #0f78e2;
+}
+
+.attendance-page p {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #1f1212;
+  padding: 10px;
+  text-align: center;
+}
+
+.attendance-table th {
+  background-color: #3498db;
+  color: white;
+}
+
+.attendance-table tr:nth-child(even) {
+  background-color: #f1e6e6;
+}
+
+.attendance-table tr.present td:last-child {
+  color: rgb(95, 202, 95);
+  font-weight: bold;
+}
+
+.attendance-table tr.absent td:last-child {
+  color: rgb(184, 38, 38);
+  font-weight: bold;
+}

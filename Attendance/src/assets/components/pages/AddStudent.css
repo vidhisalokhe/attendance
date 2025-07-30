@@ -1,0 +1,82 @@
+.student-management {
+  padding: 2rem;
+  background-color:  #5f91c3;
+  min-height: 100vh;
+  color: black;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.student-form {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.student-form input {
+  padding: 0.5rem;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+}
+
+.student-form button {
+  padding: 0.5rem;
+  background-color: #892696;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.student-form button:hover {
+  background-color: #832a8b;
+}
+
+.table-container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  color: #7a8497;
+}

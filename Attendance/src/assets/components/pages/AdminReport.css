@@ -1,0 +1,78 @@
+/* Fullscreen container */
+.admin-report-fullscreen {
+  width: 90vw;
+  height: 100vh;
+  background-color:  #5f91c3; /* Purple */
+  padding: 30px;
+  box-sizing: border-box;
+  color: black;
+}
+
+/* Title */
+.report-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(15, 13, 13);
+  text-align: left;
+}
+
+/* Full-width Table Container */
+.table-container-full {
+  width: 100%;
+  background: rgb(200, 138, 202);
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Table */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+/* Table Head */
+.report-table thead {
+  background-color: #7a2da6;
+  color: rgb(231, 231, 231);
+}
+
+.report-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #1e4bb8;
+}
+
+/* Table Rows */
+.report-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+/* 
+.report-table tr:nth-child(even) {
+  background-color: #dd2626;
+} */
+
+/* Hover effect */
+.report-table tr:hover {
+  background-color: #a5b1c6;
+}
+
+/* Status Colors */
+.present {
+  color: green;
+  font-weight: bold;
+}
+
+.absent {
+  color: red;
+  font-weight: bold;
+}
+
+.percentage {
+  font-weight: bold;
+  color: #444;
+}

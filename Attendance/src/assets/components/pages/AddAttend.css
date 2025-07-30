@@ -1,0 +1,61 @@
+ .attendance {
+  padding: 2rem;
+  background-color: #5e7dbc;
+  min-height: 100%;
+  color:black;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.table-container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #e5e7eb;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.present {
+  color: green;
+  font-weight: bold;
+}
+
+.absent {
+  color: red;
+  font-weight: bold;
+}
+
+.toggle-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #2563eb;
+}
