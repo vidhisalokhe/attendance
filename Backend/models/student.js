@@ -1,28 +1,13 @@
-// import mongoose from "mongoose";
-
-// const studentSchema = new mongoose.Schema({
-//   email: String,
-//   password: String,
-//   role: String, 
-  
-// });
-
-// const Student = mongoose.model("Student", studentSchema);
-
-// export default Student;  
-
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const studentSchema = new mongoose.Schema({
-  email: { 
-    type: String, 
-    required: true 
-  },
-  password: { 
-    type: String, 
-    required: true 
-  }
-}, { timestamps: true });
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  role: { type: String, default: 'student' , default:'teacher' }
+});
 
-const studentModel = mongoose.model("students", studentSchema);
-module.exports = studentModel;
+const Student = mongoose.model('Student', studentSchema);
+ 
+
+export default Student;

@@ -1,0 +1,50 @@
+/* SyllabusStu.css */
+.syllabus-page {
+  padding: 20px;
+  color: black;
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.semester-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.semester-tabs button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ae25ac;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.semester-tabs button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.syllabus-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.syllabus-table th,
+.syllabus-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.syllabus-table th {
+  background-color: #9e4015;
+}

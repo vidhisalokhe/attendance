@@ -1,0 +1,34 @@
+.myclasses-container {
+  width: 85%;
+  margin: 30px auto;
+  text-align: center;
+}
+ .myclasses-table tr{
+      color: black;
+ }
+.myclasses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #ededed;
+
+}
+
+.myclasses-table th,
+.myclasses-table td {
+  border: 1px solid #ededed;
+  padding: 10px;
+}
+
+.myclasses-table th {
+  background-color: #f4f4f4;
+}
+
+.view-btn {
+  padding: 5px 10px;
+  background-color: #55b8e7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

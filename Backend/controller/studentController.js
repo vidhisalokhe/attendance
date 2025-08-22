@@ -1,48 +1,61 @@
-import Student from "../models/student.js";
+import Student from '../models/student.js';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken'; 
 
-export const createStudent = async (req, res) => {
+export const registerStudent = async (req, res) => {
+  const { name, email, password, role } = req.body;
+
   try {
-    const student = new Student(req.body);
-    await student.save();
-    res.status(201).json(student);
+    const existingUser = await Student.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ success: false, message: 'User already exists' });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newStudent = new Student({
+      name,
+      email,
+      password: hashedPassword,
+      role: role || 'student'
+    });
+
+    await newStudent.save();
+
+    res.status(201).json({ success: true, message: 'User registered successfully' });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ success: false, message: 'Server error', error: error.message });
   }
 };
 
-export const getAllStudents = async (req, res) => {
-  try {
-    const students = await Student.find();
-    res.json(students);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
+export const loginStudent = async (req, res) => {
+  const { email, password } = req.body;
 
-export const getStudentById = async (req, res) => {
   try {
-    const student = await Student.findById(req.params.id);
-    if (!student) return res.status(404).json({ error: 'Student not found' });
-    res.json(student);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
+    // Sirf email pe user find
+    const student = await Student.findOne({ email });
+    if (!student) {
+      return res.status(400).json({ success: false, message: 'User not found' });
+    }
 
-export const updateStudent = async (req, res) => {
-  try {
-    const student = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(student);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-};
+    // Password compare
+    const isMatch = await bcrypt.compare(password, student.password);
+    if (!isMatch) {
+      return res.status(400).json({ success: false, message: 'Invalid credentials' });
+    }
+       
+    //  const token = jwt.sign({ id: user._id, role: user.role }, "secret");
+    const token = jwt.sign({ id: student._id }, "secretkey", { expiresIn: "1h" });
 
-export const deleteStudent = async (req, res) => {
-  try {
-    await Student.findByIdAndDelete(req.params.id);
-    res.json({ message: 'Student deleted' });
+
+    // Dummy token (JWT later add kar sakte ho)
+    res.status(200).json({
+      success: true,
+      message: 'Login successful',
+      token: 'dummy-token',
+      role: student.role,
+    });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ success: false, message: 'Server error', error: error.message });
   }
 };

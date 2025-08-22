@@ -67,56 +67,84 @@
 
 
 
-import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import './Admin.css';
-import AddStudent from './AddStudent';
- 
-import AdminReport from './AdminReport';
-import TeacherAdd from './TeacherAdd';
+import React from "react";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import "./Admin.css";
 
+// Import admin pages
+import AddStudent from "./AddStudent";
+import Classes from "./Classes";
+import AdminReport from "./AdminReport";
+import TeacherAdd from "./TeacherAdd";
+import Subject from "./Subject";
+import AdminProfile from "./AdminProfile";
 
 const Admin = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="admin-dashboard">
       {/* Sidebar */}
       <aside className="sidebar">
-        <h2>Admin Panel</h2>
-        <ul>
-          <li><Link to="">Dashboard</Link></li>
-          <li><Link to="addstudent"> Student </Link></li>
-          <li><Link to="teacheradd"> Manage Teacher</Link></li>
-          <li><Link to="classes">Classes Schedule</Link></li>
-          <li><Link to="subject">Subject</Link></li>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            cursor: "pointer",
+            marginBottom: "15px"
+          }}
+          onClick={() => navigate("/admin")} // Dashboard pe wapas
+        >
+          <span style={{ marginRight: "8px" }}>⬅️</span>
+          <h2 style={{ margin: 0 }}>Admin Panel</h2>
+        </div>
 
-          
-        
-          <li><Link to="adminreport"> Report</Link></li>
-          <li><Link to="admin profile">Admin Profile</Link></li>
+        <ul>
+          <li><Link to="">📊 Dashboard</Link></li>
+          <li><Link to="addstudent">🧑‍🎓 Student</Link></li>
+          <li><Link to="teacheradd">🧑‍🏫 Manage Teacher</Link></li>
+          <li><Link to="classes">📅⏰ Classes Schedule</Link></li>
+          <li><Link to="subject">📚 Subject</Link></li>
+          <li><Link to="adminreport">📈 Report</Link></li>
+          <li><Link to="adminprofile">🧑‍💼 Admin Profile</Link></li>
+          <li><Link to="/">🚪 Logout</Link></li>
         </ul>
       </aside>
 
       {/* Main Content */}
       <main className="main-content">
         <Routes>
-          {/* Dashboard (default nested route) */}
-          <Route path="/" element={
-            <>
-              <h1>Dashboard</h1>
-              <div className="stats-container">
-                <div className="card"><h3>Total Students</h3><p>150</p></div>
-                <div className="card"><h3>Present Today</h3><p>135</p></div>
-                <div className="card"><h3>Absent Today</h3><p>15</p></div>
-              </div>
-            </>
-          } />
+          {/* Default dashboard */}
+          <Route
+            path="/"
+            element={
+              <>
+                <h1>Welcome, Admin</h1>
+                <div className="stats-container">
+                  <div className="card">
+                    <h3>Total Students</h3>
+                    <p>150</p>
+                  </div>
+                  <div className="card">
+                    <h3>Present Today</h3>
+                    <p>135</p>
+                  </div>
+                  <div className="card">
+                    <h3>Absent Today</h3>
+                    <p>15</p>
+                  </div>
+                </div>
+              </>
+            }
+          />
 
-          {/* AdminReport nested route */}
+          {/* Nested routes */}
           <Route path="addstudent" element={<AddStudent />} />
           <Route path="teacheradd" element={<TeacherAdd />} />
-       
-       
+          <Route path="classes" element={<Classes />} />
+          <Route path="subject" element={<Subject />} />
           <Route path="adminreport" element={<AdminReport />} />
+          <Route path="adminprofile" element={<AdminProfile />} />
         </Routes>
       </main>
     </div>
@@ -124,4 +152,3 @@ const Admin = () => {
 };
 
 export default Admin;
-

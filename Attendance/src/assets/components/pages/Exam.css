@@ -1,0 +1,28 @@
+/* Exam.css */
+.exam-schedule-page {
+  padding: 20px;
+  color: black;
+}
+
+.exam-schedule-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: rgb(202, 13, 168);
+}
+
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exam-table th,
+.exam-table td {
+  border: 1px solid #eff1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.exam-table th {
+  background-color: #b83737;
+}

@@ -1,0 +1,28 @@
+/* ScheduleStu.css */
+.schedule-page {
+  padding: 20px;
+  color: black;
+}
+
+.schedule-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: rgb(172, 25, 76);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.schedule-table th {
+  background-color: #09a579;
+}

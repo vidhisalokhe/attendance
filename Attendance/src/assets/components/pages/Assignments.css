@@ -1,0 +1,62 @@
+.assignments-container {
+  width: 85%;
+  margin: 30px auto;
+  text-align: center;
+  color: black;
+}
+
+.assignment-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.assignment-form input {
+  padding: 8px;
+  width: 180px;
+}
+
+.assignment-form button {
+  padding: 8px 15px;
+  background-color: #55b8e7;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.assignments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assignments-table th,
+.assignments-table td {
+  border: 1px solid #efeeee;
+  padding: 10px;
+}
+
+.assignments-table th {
+  background-color: #855959;
+}
+
+.edit-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -9,6 +9,7 @@ const AdminReport = () => {
       { id: 1, name: "Prathana Jadhv", totalDays: 30, presentDays: 28, absentDays: 2 },
       { id: 2, name: "Sanika Patil", totalDays: 30, presentDays: 25, absentDays: 5 },
       { id: 3, name: "Kusum Nalwade", totalDays: 30, presentDays: 29, absentDays: 1 },
+      { id: 4, name: "Vidhi Salokhe", totalDays:30, presentDays:27, absentDays:2},
     ];
     setReports(sampleReports);
   }, []);

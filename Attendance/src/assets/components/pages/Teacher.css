@@ -9,7 +9,7 @@
 
 .sidebar {
   width: 220px;
-  background-color: #7089d8;
+  background-color: #97a6d5;
   color: white;
   padding: 20px;
 }
@@ -30,13 +30,13 @@
 }
 
 .sidebar li:hover {
-  background-color: #bb73be;
+  background-color: #bd8ebe;
 }
 
 .main-content {
   flex-grow: 1;
   padding: 30px;
-  background-color: #233d92;
+  background-color: #2a3662;
 }
 
 .stats-container {
@@ -46,7 +46,7 @@
 }
 
 .card {
-  background-color: rgb(182, 63, 201);
+  background-color: rgb(181, 102, 193);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);

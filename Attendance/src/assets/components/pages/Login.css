@@ -1,19 +1,75 @@
+/* Reset */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
+/* Login page background */
 .login-container {
-  height: 100vh;
-  width: 100vw;  /* Add this line */
-  background-color: #020202;
+  min-height: calc(100vh - 70px); /* 70px = navbar height */
+  width: 100vw;
+  background-color: rgb(194, 91, 91); /* apka maroon shade */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 70px; /* taaki navbar overlap na kare */
+}
+
+ 
+/* Navbar */
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* vertical center */
+  padding: 12px 40px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Logo text */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6a11cb;   /* purple shade */
+  margin: 0;
+  line-height: 1;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+/* Normal links */
+.nav-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #6a11cb;
+}
+
+/* Login button */
+.login-btn {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
 
+
+/* Login card */
 .login-card {
   background: #faf7f7;
   padding: 30px 25px;
@@ -30,6 +86,7 @@ body, html {
   color: #050404;
 }
 
+/* Input fields */
 .login-input {
   width: 100%;
   padding: 10px 14px;
@@ -39,20 +96,18 @@ body, html {
   font-size: 14px;
   outline: none;
   transition: border 0.3s ease;
-  color:#020202;
-  
+  color: #020202;
 }
-
- 
 
 .login-input:focus {
   border-color: #2f3235;
 }
 
+/* Login button inside card */
 .login-button {
   width: 100%;
-  background-color: #0d9488;
-  color: #fffcfc;
+  background-color: #143a8b;
+  color: #fff;
   padding: 10px;
   border: none;
   border-radius: 8px;
@@ -65,6 +120,7 @@ body, html {
   background-color: #0f766e;
 }
 
+/* Forgot password */
 .forgot-password {
   text-align: center;
   margin-top: 15px;
@@ -74,5 +130,5 @@ body, html {
 }
 
 .forgot-password:hover {
-  text-decoration: underline;
+  text-decoration: underline;
 }

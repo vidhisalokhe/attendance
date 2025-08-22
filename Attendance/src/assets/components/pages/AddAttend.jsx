@@ -3,10 +3,10 @@ import "./AddAttend.css";
 
 const AddAttend= () => {
   const [students, setStudents] = useState([
-    { id: 1, name: "John Doe", rollNo: "101", status: "Present" },
-    { id: 2, name: "Jane Smith", rollNo: "102", status: "Absent" },
-    { id: 3, name: "Alice Johnson", rollNo: "103", status: "Present" },
-    { id: 4, name: "Bob Brown", rollNo: "104", status: "Absent" },
+    { id: 1, name: "Sanika Patil", rollNo: "101", status: "Present" },
+    { id: 2, name: "Kusum Nalawde ", rollNo: "102", status: "Absent" },
+    { id: 3, name: "Prathana Jadhav", rollNo: "103", status: "Present" },
+    { id: 4, name: "Vidhi Salokhe", rollNo: "104", status: "Absent" },
   ]);
 
   const toggleAttendance = (id) => {

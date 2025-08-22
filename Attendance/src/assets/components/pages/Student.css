@@ -53,4 +53,13 @@
   box-shadow: 0 2px 5px #e1dede1a;
   flex: 1;
   text-align: center;
+  
 }
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+ 

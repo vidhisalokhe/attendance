@@ -1,45 +1,109 @@
+/* AttendanceStu.css
 .attendance-page {
   padding: 20px;
+  color: black;
 }
 
-.attendance-page h1 {
+.attendance-page h2 {
   margin-bottom: 10px;
-  color: #0f78e2;
-}
-
-.attendance-page p {
-  font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .attendance-table {
   width: 100%;
   border-collapse: collapse;
-  
+  margin-top: 10px;
 }
 
 .attendance-table th,
 .attendance-table td {
-  border: 1px solid #1f1212;
-  padding: 10px;
+  border: 1px solid #ddd;
+  padding: 8px;
   text-align: center;
 }
 
 .attendance-table th {
-  background-color: #3498db;
+  background-color: #f2f2f2;
+}
+
+.present {
+  background-color: #d4edda; /* Green shade */
+/* } */
+
+/* .absent {
+  background-color: #c75454; /* Red shade */
+/* } */ */ */
+
+
+.attendance-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #090909;
+}
+
+/* Table Top */
+.attendance-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #1e1e2e;
+}
+.attendance-table th, .attendance-table td {
+  border: 1px solid #444;
+  padding: 6px 10px;
+  text-align: center;
+}
+.attendance-table th {
+  background: #1e1e2e;
+  color: rgb(238, 237, 237);
+}
+.attendance-table .present { background: #b15f5f; }
+.attendance-table .absent { background: hsl(0, 37%, 45%); }
+
+/* Bottom Section: Calendar + Circle */
+.calendar-stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.calendar-container {
+  background: #1e1e2e;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.react-calendar {
+  background: transparent;
+  border: none;
   color: white;
 }
 
-.attendance-table tr:nth-child(even) {
-  background-color: #f1e6e6;
+.react-calendar__tile {
+  color: white;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 12px;
 }
 
-.attendance-table tr.present td:last-child {
-  color: rgb(95, 202, 95);
-  font-weight: bold;
+.react-calendar__tile--active {
+  background: #0D6EFD !important;
+  color: white !important;
 }
 
-.attendance-table tr.absent td:last-child {
-  color: rgb(184, 38, 38);
-  font-weight: bold;
+.react-calendar__navigation button {
+  color: white;
+  font-size: 14px;
+}
+
+/* Circle Attendance on Right */
+.attendance-circle-bottom {
+  width: 120px;
+  height: 120px;
+  color: white;
+  text-align: center;
 }

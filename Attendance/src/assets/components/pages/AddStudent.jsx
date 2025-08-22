@@ -3,10 +3,10 @@ import "./AddStudent.css"; // Import CSS file
 
 const  AddStudent = () => {
   const [students, setStudents] = useState([
-    { id: 1, name: "John Doe", rollNo: "101", department: "Computer Science", year: "4th" },
-    { id: 2, name: "Jane Smith", rollNo: "102", department: "Electrical", year: "3rd" },
-    { id: 3, name: "Alice Johnson", rollNo: "103", department: "Mechanical", year: "2nd" },
-    { id: 4, name: "Bob Brown", rollNo: "104", department: "Civil", year: "1st" },
+    { id: 1, name: "Sanika Patil", rollNo: "101", department: "Computer Science", year: "4th" },
+    { id: 2, name: "Kusum Nalawade", rollNo: "102", department: "Electrical", year: "3rd" },
+    { id: 3, name: "Prathna Jadhav", rollNo: "103", department: "Mechanical", year: "2nd" },
+    { id: 4, name: "Vidhi Salokhe", rollNo: "104", department: "Civil", year: "1st" },
   ]);
 
   const [form, setForm] = useState({ name: "", rollNo: "", department: "", year: "" });
